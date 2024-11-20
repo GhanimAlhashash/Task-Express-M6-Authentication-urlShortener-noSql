@@ -1,11 +1,11 @@
 const Url = require("../../models/Url");
 const shortid = require("shortid");
 const User = require("../../models/User");
-
 const baseUrl = "http:localhost:8000/urls";
 
 exports.shorten = async (req, res) => {
   // create url code
+  console.log("forloop")
   const urlCode = shortid.generate();
   try {
     req.body.shortUrl = `${baseUrl}/${urlCode}`;
